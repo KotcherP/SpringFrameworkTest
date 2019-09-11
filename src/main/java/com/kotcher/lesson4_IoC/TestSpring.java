@@ -15,11 +15,25 @@ public class TestSpring {
         //MusicPlayer musicPlayer = new MusicPlayer(music);
 
         //внедрение через спринг (в xml applicationContext)
-        MusicPlayer musicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
-        musicPlayer.playMusic();
+        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
+        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer",MusicPlayer.class);
 
-        System.out.println(musicPlayer.getName());
-        System.out.println(musicPlayer.getVolume());
+        boolean comparsion = firstMusicPlayer == secondMusicPlayer;
+
+        System.out.println(comparsion);
+
+        System.out.println(firstMusicPlayer);
+        System.out.println(secondMusicPlayer);
+
+        firstMusicPlayer.setVolume(100);
+
+        System.out.println(firstMusicPlayer.getVolume());
+        System.out.println(secondMusicPlayer.getVolume());
+
+//        musicPlayer.playMusic();
+//
+//        System.out.println(musicPlayer.getName());
+//        System.out.println(musicPlayer.getVolume());
 
         context.close();
 

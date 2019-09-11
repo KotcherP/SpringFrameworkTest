@@ -23,8 +23,14 @@
         <constructor-arg ref="musicBean"/>
     </bean>!-->
 
+    <!--
+    по-умолчанию, scope(область видимости бина) singleton(все ссылки на один экземпляр)
+    prototype - создает разные объекты
+    !-->
     <bean id="musicPlayer"
-          class="com.kotcher.lesson4_IoC.MusicPlayer">
+          class="com.kotcher.lesson4_IoC.MusicPlayer"
+    scope="prototype">
+
         <property name="music" ref="musicBean"/>
 
         <!--<property name="name" value="Some name"/>
