@@ -1,4 +1,4 @@
-package com.kotcher;
+package com.kotcher.lesson2;
 
 public class TestBean {
     private String name;

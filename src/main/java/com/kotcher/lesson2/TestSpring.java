@@ -1,5 +1,6 @@
-package com.kotcher;
+package com.kotcher.lesson2;
 
+import com.kotcher.lesson2.TestBean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class TestSpring {
